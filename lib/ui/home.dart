@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mail_client/ui/email_tile.dart';
+import '../data/dummy.dart' as dummy;
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -17,11 +19,11 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         child: ListView(
           children: [
-            Text('data'),
-            Text('data'),
-            Text('data'),
-            Text('data'),
-            Text('data'),
+            EmailListTile(emailMessage: dummy.emails[0]),
+            EmailListTile(emailMessage: dummy.emails[1]),
+            EmailListTile(emailMessage: dummy.emails[2]),
+            EmailListTile(emailMessage: dummy.emails[3]),
+            EmailListTile(emailMessage: dummy.emails[4]),
           ],
         ),
       ),
